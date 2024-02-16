@@ -1,0 +1,119 @@
+:root {
+  --clr-primary: hsl(75, 94%, 57%);
+  --clr-txt: hsl(0, 0%, 100%);
+  --clr-bg: hsl(0, 0%, 20%);
+  --clr-bg-alt: hsl(0, 0%, 12%);
+  --clr-neutral: hsl(0, 0%, 8%);
+  --clr-blue: hsl(228, 45%, 44%);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --clr-primary: hsl(75, 94%, 43%);
+    --clr-txt: hsl(0, 0%, 0%);
+    --clr-bg: hsl(0, 0%, 80%);
+    --clr-bg-alt: hsl(0, 0%, 88%);
+    --clr-neutral: hsl(0, 0%, 92%);
+    --clr-blue: hsl(228, 45%, 56%);
+  }
+}
+
+@font-face {
+  font-family: Inter-Bold;
+  src: url("./assets/fonts/static/Inter-Bold.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Inter-Regular;
+  src: url("./assets/fonts/static/Inter-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Inter-SemiBold;
+  src: url("./assets/fonts/static/Inter-SemiBold.ttf");
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter-Regular;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: var(--clr-neutral);
+  color: var(--clr-txt);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+main {
+  width: min(100cw, 375px);
+  background-color: var(--clr-bg-alt);
+  border-radius: 10px;
+  padding: 23px;
+  margin: 15px;
+}
+
+h1 {
+  font-family: Inter-Bold;
+  font-weight: 700;
+}
+
+img {
+  border-radius: 50%;
+  border: 1px solid var(--clr-neutral);
+  width: 50%;
+  height: auto;
+}
+
+p {
+  font-size: 14px;
+}
+
+#location {
+  color: var(--clr-primary);
+  font-family: Inter-SemiBold;
+  font-weight: 600;
+}
+
+#tagline {
+  margin-block: 20px;
+}
+
+#social a {
+  font-family: Inter-SemiBold;
+  display: block;
+  background-color: var(--clr-bg);
+  color: var(--clr-txt);
+  padding: 12px;
+  margin-block: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#social a:last-child {
+  margin-bottom: 0;
+}
+
+#social a:active,
+#social a:hover {
+  background-color: var(--clr-primary);
+  color: var(--clr-neutral);
+}
+
+footer {
+  bottom: 0;
+  font-size: 11px;
+}
+
+footer a {
+  color: var(--clr-blue);
+}
